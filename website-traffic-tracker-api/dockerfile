@@ -1,0 +1,14 @@
+# Dockerfile for Website Traffic Tracker API
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY .env.example .env
+COPY src ./src
+
+RUN npm install
+
+EXPOSE 5000
+
+CMD ["npm", "start"]

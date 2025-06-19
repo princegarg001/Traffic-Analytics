@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Hit Listener</title>
+</head>
+<body>
+  <h1>Real-time Page Hit Events</h1>
+  <ul id="events"></ul>
+
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script>
+    const socket = io("http://localhost:5000");
+    const ul = document.getElementById("events");
+    socket.on("new-hit", data => {
+      const li = document.createElement("li");
+      li.textContent = `Hit: ${data.url} | Referrer: ${data.referrer} | Time: ${data.timestamp}`;
+      ul.appendChild(li);
+    });
+  </script>
+</body>
+</html>
