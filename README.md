@@ -161,15 +161,6 @@ A full set of API calls is available in the `postman_collection.json` file (if i
 * GeoIP to enrich logs with visitor location data.
 
 ---
-
-## 📌 To Do
-
-* Add unit tests and coverage
-* Add real-time chart dashboard
-* Extend support to PostgreSQL (optional)
-
----
-
 ## 📄 License
 
 [MIT](LICENSE)
